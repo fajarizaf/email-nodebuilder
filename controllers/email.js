@@ -209,7 +209,7 @@ function getTemplate(template, context) {
 
     const section = {
         body: body_template,
-        logo: 'https://app.nodebuilder.id/storage/uploads/avatar/logo-sample.png'
+        logo: context.logo
     }
     return templated(section)
 
