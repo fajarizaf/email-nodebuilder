@@ -73,11 +73,11 @@ require('./routes/email')(app)
 const mysql = require('mysql2/promise');
 
 mysql.createConnection({
-  host: config.host,
-  user: config.username,
-  password: config.password
+  host: env('DB_HOST'),
+  user: env('DB_USER'),
+  password: env('DB_PASS')
 }).then((connection) => {
-  connection.query('CREATE DATABASE IF NOT EXISTS `node-email`;').then(() => {
+  connection.query('CREATE DATABASE IF NOT EXISTS `appnode`;').then(() => {
     // Safe to use sequelize now
   })
 })
