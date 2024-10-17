@@ -208,7 +208,8 @@ function getTemplate(template, context) {
     const body_template = template_bodys(context)
 
     const section = {
-        body: body_template
+        body: body_template,
+        logo: 'https://app.nodebuilder.id/storage/uploads/avatar/logo-sample.png'
     }
     return templated(section)
 
