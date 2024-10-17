@@ -36,7 +36,7 @@ function subject(params) {
 
 exports.SEND = (data, templates) => new Promise((resolve, reject) => {
 
-    sgMail.setApiKey('')
+
     const msg = {
         to: 'regeditsq@gmail.com', // Change to your recipient
         from: 'info@mettadc.com', // Change to your verified sender
