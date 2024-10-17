@@ -23,11 +23,11 @@ const templated_invoices = handlebars.compile(source_invoices);
 
 
 var transporter = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
+    host: 'smtp-relay.brevo.com',
     port: 587,
     auth: {
-        user: 'a30f8c662cd4ce',
-        pass: '10ce3862b84978'
+        user: '7e1866001@smtp-brevo.com',
+        pass: 'TAq4PCZnBt7hD1jK'
     }
 })
 
