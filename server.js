@@ -9,7 +9,6 @@ var Handlebars = require('handlebars');
 const cors = require('cors')
 
 const env = process.env.NODE_ENV || 'local';
-const config = require(__dirname + '/config/config.json')[env];
 
 // call controllers
 const log = require("./controllers/email-log")
@@ -19,8 +18,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 app.use(cors({
-  credentials: true,
-  origin: [config.url_frond_local, config.url_frond_local_2, config.url_frond_staging]
+  credentials: false,
 }))
 
 
@@ -73,9 +71,9 @@ require('./routes/email')(app)
 const mysql = require('mysql2/promise');
 
 mysql.createConnection({
-  host: env('DB_HOST'),
-  user: env('DB_USER'),
-  password: env('DB_PASS')
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS
 }).then((connection) => {
   connection.query('CREATE DATABASE IF NOT EXISTS `appnode`;').then(() => {
     // Safe to use sequelize now

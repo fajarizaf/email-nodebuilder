@@ -97,7 +97,7 @@ exports.SEND = (data, templates, subject) => new Promise((resolve, reject) => {
     try {
 
         var mailOptions = {
-            from: 'MettaDC <fajarizaf@outlook.com>',
+            from: 'Nodebuilder <info@nodebuilder.id>',
             to: data.send_to,
             subject: subject,
             html: getTemplate(templates, data)
