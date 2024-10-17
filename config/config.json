@@ -1,0 +1,29 @@
+{
+  "local": {
+    "username": "root",
+    "password": "mysql",
+    "database": "node-email",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": "3306",
+    "timezone": "+07:00"
+  },
+  "development": {
+    "username": "root",
+    "password": "mysql",
+    "database": "node-email",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": "3306",
+    "timezone": "+07:00"
+  },
+  "production": {
+    "username": "root",
+    "password": "mysql",
+    "database": "node-email",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": "3306",
+    "timezone": "+07:00"
+  }
+}
