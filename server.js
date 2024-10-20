@@ -47,6 +47,7 @@ const captureLog = (req, res, next) => {
       log.createLogs(
         req.body.send_to,
         req.body.action,
+        req.body.module_id,
         req,
         body
       )
